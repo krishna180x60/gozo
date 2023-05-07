@@ -4,6 +4,7 @@ import streamlit as st
 from streamlit_lottie import st_lottie
 from streamlit_player import st_player
 import webbrowser
+from bokeh.models.widgets import Div
 #for emojis-> [ https://webfx.com/tools/emoji-cheat-sheet/ ]😼
 st.set_page_config(page_title='gozo',page_icon="image/icon.png",layout="wide")
 
@@ -73,10 +74,18 @@ with st.container():
 
 
      
-     url = 'https://gozoanime.world/home'
+     url = ""
+    
+
+     if st.button('Visit The FullSite'):
+        #js = "window.open('https://www.streamlit.io/')"  # New tab or window
+        js = "window.location.href = 'https://www.gozoanime.world/'"  # Current tab
+        html = '<img src onerror="{}">'.format(js)
+        div = Div(text=html)
+        st.bokeh_chart(div)
  
-     if st.button("Visit The FullSite"):
-         webbrowser.open_new_tab("https://gozoanime.world")
+     #if st.button("Visit The FullSite"):
+         #webbrowser.open_new_tab("https://gozoanime.world")
 #---what i do----
 with st.container():
     st.write("---")
