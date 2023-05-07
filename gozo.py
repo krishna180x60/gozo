@@ -76,7 +76,7 @@ with st.container():
      url = 'https://gozoanime.world/home'
  
      if st.button("Visit The FullSite"):
-         webbrowser.open("https://gozoanime.world/home")
+         webbrowser.open_new_tab("https://gozoanime.world")
 #---what i do----
 with st.container():
     st.write("---")
