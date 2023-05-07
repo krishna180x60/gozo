@@ -147,7 +147,14 @@ with st.container():
     
 with st.container():
     st.header("chainsaw man ep1 in hindi")
-    st_player("https://video.bunnycdn.com/play/118823/5c7dea31-578b-43be-afab-68e7831245c3")
+    left_column,center,right=st.columns((2,2,2))
+    with left_column:
+        vido='''<div style="position: relative; padding-top: 56.25%;"><iframe src="https://iframe.mediadelivery.net/embed/118823/5c7dea31-578b-43be-afab-68e7831245c3?autoplay=true&preload=true" loading="lazy" style="border: none; position: absolute; top: 0; height: 100%; width: 100%;" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe></div>'''
+        st.markdown(vido,unsafe_allow_html=True)
+    with center:
+        st.empty()
+    with right:
+        st.empty()
 
 
 with st.container():
