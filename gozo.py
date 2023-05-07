@@ -75,7 +75,7 @@ with st.container():
     with l:
         st.empty()
     with mybutto:
-        mybutton='''<a class="button" href="https://www.gozoanime.world" target="_blank">Visit the full site</a>'''
+        mybutton='''<a class="button" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 4px; font-size: 16px; cursor: pointer;"href="https://www.gozoanime.world" target="_blank">Visit the full site</a>'''
         st.markdown(mybutton,unsafe_allow_html=True)
     with r:
        st.empty()
