@@ -70,9 +70,10 @@ with st.container():
      st.write('''There is only few anime which are dubbed in hindi so we can't say. That we have big collection
                  However as time being passes we will add new anime as soon as when they get dubbed.''')
     #  st.write("[learn more >](https://gamegamesimsim.netlify.app/)")
+with st.container():
     l,mybutto,r=st.columns((1,3,1))
     with l:
-      st.empty()
+        st.empty()
     with mybutto:
         mybutton='''<a class="button" href="https://www.gozoanime.world" target="_blank">Open Web Page</a>'''
         st.markdown(mybutton,unsafe_allow_html=True)
