@@ -4,7 +4,6 @@ import streamlit as st
 from streamlit_lottie import st_lottie
 from streamlit_player import st_player
 import webbrowser
-from bokeh.models.widgets import Div
 #for emojis-> [ https://webfx.com/tools/emoji-cheat-sheet/ ]😼
 st.set_page_config(page_title='gozo',page_icon="image/icon.png",layout="wide")
 
@@ -71,18 +70,23 @@ with st.container():
      st.write('''There is only few anime which are dubbed in hindi so we can't say. That we have big collection
                  However as time being passes we will add new anime as soon as when they get dubbed.''')
     #  st.write("[learn more >](https://gamegamesimsim.netlify.app/)")
+    l,mybutto,r=st.columns((1,3,1))
+    with l:
+      st.empty()
+    with mybutto:
+        mybutton='''<a class="button" href="https://www.gozoanime.world" target="_blank">Open Web Page</a>'''
+        st.markdown(mybutton,unsafe_allow_html=True)
+    with r:
+       st.empty()
+
+
 
 
      
-     url = ""
+    
     
 
-     if st.button('Visit The FullSite'):
-        #js = "window.open('https://www.streamlit.io/')"  # New tab or window
-        js = "window.location.href = 'https://www.gozoanime.world/'"  # Current tab
-        html = '<img src onerror="{}">'.format(js)
-        div = Div(text=html)
-        st.bokeh_chart(div)
+
  
      #if st.button("Visit The FullSite"):
          #webbrowser.open_new_tab("https://gozoanime.world")
